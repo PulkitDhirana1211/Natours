@@ -13,6 +13,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const viewRouter = require('./routes/viewRoutes');
+const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const app = express();
@@ -107,7 +108,9 @@ app.use(cors());
 // Prevent parameter pollution
 app.use(hpp({
     whitelist: ['duration', 'ratingsQuantity', 'ratingsAverage', 'maxGroupSize', 'difficulty', 'price']
-}))
+}));
+
+app.use(compression());
 
 // Test middlewares
 app.use((req, res, next) => {
