@@ -29,7 +29,8 @@ exports.getTour = catchAsync(async (req, res, next) => {
 
     res.status(200).render('tour', {
         title: `${tour.name} Tour`,
-        tour
+        tour,
+        mapboxToken: process.env.MAPBOX_TOKEN
     });
 });
 
