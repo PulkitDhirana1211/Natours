@@ -4,11 +4,11 @@
   "description": "Learning node, express and mongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
     "start:dev": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js",
-    "watch:js": "parcel watch ./public/js/index.js  --out-dir ./public/js --out-file bundle.js",
-    "build:js": "parcel build ./public/js/index.js  --out-dir ./public/js --out-file bundle.js",
+    "start:prod": "NODE_ENV=production node server.js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
     "heroku-postbuild": "npm run build:js"
   },
   "author": "Pulkit Dhirana",
@@ -36,6 +36,8 @@
     "morgan": "^1.10.1",
     "multer": "^2.0.2",
     "nodemailer": "^8.0.0",
+    "parcel-bundler": "^1.12.5",
+    "pm2": "^6.0.14",
     "pug": "^3.0.3",
     "sharp": "^0.34.5",
     "slugify": "^1.6.6",
@@ -45,7 +47,6 @@
   },
   "devDependencies": {
     "@types/mongoose": "^5.11.96",
-    "@types/node": "^25.2.2",
-    "parcel-bundler": "^1.12.5"
+    "@types/node": "^25.2.2"
   }
 }
