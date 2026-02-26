@@ -24,6 +24,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));      // Static files
 
 // Global Middlewares
+app.use(cors());
+// Allows all origins
+
+app.options('*', cors());  // Pre flight phase for non simple requests like put, patch or delete
+// app.options('/api/v1/tours/:id', cors()); 
+
 // Set security HTTP headers
 // app.use(helmet());
 app.use(
@@ -98,8 +104,6 @@ app.use(mongoSanitize());
 // Data sanitize against XSS
 app.use(xss());
 
-app.use(cors());
-// Allows all origins
 
 // Safe production use:
 // app.use(cors({
