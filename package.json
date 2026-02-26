@@ -4,6 +4,7 @@
   "description": "Learning node, express and mongoDB",
   "main": "app.js",
   "scripts": {
+    "start": "node server.js",
     "start:dev": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "watch:js": "parcel watch ./public/js/index.js  --out-dir ./public/js --out-file bundle.js",
@@ -26,6 +27,7 @@
     "express-rate-limit": "^8.2.1",
     "gdb": "^0.1.0-pre",
     "helmet": "^8.1.0",
+    "heroku": "^8.7.1",
     "hpp": "^0.2.3",
     "html-to-text": "^9.0.5",
     "jsonwebtoken": "^9.0.3",
