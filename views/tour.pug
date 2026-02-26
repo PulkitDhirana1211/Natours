@@ -3,7 +3,7 @@ include _reviewCard
 
 block append head
   link(href="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css" rel="stylesheet")
-  script(src="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js")
+  script(src=`https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js?access_token=${mapboxToken}`)
   //- script(src='/js/mapbox.js')
 
 mixin overviewBox(label, text, icon)

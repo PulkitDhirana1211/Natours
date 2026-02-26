@@ -1,8 +1,8 @@
 module.exports = {
     apps: [{
         name: "natours",
-        script: "./server.js", // <-- Make sure this matches your main file
-        instances: "max",
+        script: "./server.js",
+        instances: "2",
         exec_mode: "cluster"
     }]
 }

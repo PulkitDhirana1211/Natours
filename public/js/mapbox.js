@@ -6,6 +6,14 @@ export const displayMap = (locations) => {
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v12',
+        scrollZoom: false,
+        dragPan: false,
+        dragRotate: false,
+        doubleClickZoom: false,
+        touchZoomRotate: false,
+        boxZoom: false,
+        keyboard: false,
+        touchPitch: false
     });
 
     map.on('load', () => {
