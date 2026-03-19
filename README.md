@@ -69,7 +69,7 @@ DATABASE=mongodb+srv://<user>:<pass>@cluster.mongodb.net/natours
 DATABASE_PASSWORD=
 
 # PostgreSQL (migration target)
-DATABASE_URL=postgresql://user:pass@localhost:5432/natours
+DATABASE_URL=postgresql://user:pass@localhost:PORT/natours
 
 # JWT
 JWT_SECRET=min-32-char-secret
